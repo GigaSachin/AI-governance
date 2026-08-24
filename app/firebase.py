@@ -16,14 +16,12 @@ firebase_json = os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
 if firebase_json:
     # Render / production
     service_account_info = json.loads(firebase_json)
-    cred = credentials.Certificate(
-    "/etc/secrets/serviceAccountKey.json"
-)
+    cred = credentials.Certificate(service_account_info)
 
 else:
     # Local development
     cred = credentials.Certificate(
-        "serviceAccountKey.json"
+        "/etc/secrets/serviceAccountKey.json"
     )
 
 
