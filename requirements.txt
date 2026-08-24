@@ -1,6 +1,6 @@
 fastapi
-uvicorn[standard]
+uvicorn
 google-genai
 python-dotenv
 firebase-admin
-google-cloud-bigquery
+python-multipart
