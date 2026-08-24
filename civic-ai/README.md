@@ -2,7 +2,7 @@
 
 "Report. Understand. Resolve." — a citizen reporting UI for a civic governance
 platform, wired to your existing FastAPI backend at
-`http://127.0.0.1:8000/api/analyze-request`.
+`http://https://ai-governance-odgx.onrender.com/api/analyze-request`.
 
 ## Run it
 
@@ -19,7 +19,7 @@ data — every result on screen comes from your API.
 
 I built and reviewed this in a sandboxed environment with **no network
 access**, so I could not run `npm install`, start Vite, or make a live
-request to `127.0.0.1:8000` myself. I cannot honestly claim to have executed
+request to `https://ai-governance-odgx.onrender.com` myself. I cannot honestly claim to have executed
 the full flow end-to-end against your backend. What I did do:
 
 - Wrote every file by hand and re-read each one for syntax/type correctness.

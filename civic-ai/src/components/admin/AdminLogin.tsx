@@ -49,7 +49,7 @@ export function AdminLogin({ onLogin }: AdminLoginProps) {
       // ==========================================
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/admin/verify",
+        "https://ai-governance-odgx.onrender.com",
         {
           method: "GET",
           headers: {

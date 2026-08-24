@@ -32,7 +32,7 @@ type ComplaintMapProps = {
   complaints?: Complaint[];
 };
 
-const API_URL = "http://127.0.0.1:8000/api/complaints";
+const API_URL = "https://ai-governance-odgx.onrender.com";
 
 // Default map center
 const DEFAULT_CENTER: [number, number] = [

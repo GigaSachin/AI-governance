@@ -40,7 +40,7 @@ export function ComplaintTable() {
       setError("");
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/complaints"
+        "https://ai-governance-odgx.onrender.com"
       );
 
       if (!response.ok) {
@@ -106,7 +106,7 @@ export function ComplaintTable() {
       // -----------------------------------------------------
 
       const response = await fetch(
-        `http://127.0.0.1:8000/api/complaints/${requestId}/status`,
+        `https://ai-governance-odgx.onrender.com/complaints/${requestId}/status`,
         {
           method: "PATCH",
 
