@@ -2,7 +2,7 @@ from google.cloud import bigquery
 from google.oauth2 import service_account
 
 
-SERVICE_ACCOUNT_FILE = "serviceAccountKey.json"
+SERVICE_ACCOUNT_FILE = "/etc/secrets/serviceAccountKey.json"
 
 credentials = service_account.Credentials.from_service_account_file(
     SERVICE_ACCOUNT_FILE
