@@ -34,6 +34,7 @@ app.add_middleware(
         "http://127.0.0.1:5173",
         "http://localhost:5500",
         "http://127.0.0.1:5500",
+        "https://aidigitalgovernance0028-weld.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
