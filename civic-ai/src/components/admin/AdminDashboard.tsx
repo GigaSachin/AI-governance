@@ -42,7 +42,7 @@ type StatusValue = "submitted" | "in_progress" | "resolved";
 // API
 // =========================================================
 
-const API_URL = "https://ai-governance-odgx.onrender.com";
+const API_URL = "https://ai-governance-odgx.onrender.com/api/complaints";
 
 const STATUS_API_URL = "https://ai-governance-odgx.onrender.com";
 
