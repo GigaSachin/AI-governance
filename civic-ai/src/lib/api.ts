@@ -3,7 +3,7 @@
 // =========================================================
 
 export const API_URL =
-  "https://ai-governance-odgx.onrender.com";
+  "https://ai-governance-odgx.onrender.com/api/analyze-request";
 
 
 // Gemini can take some time
