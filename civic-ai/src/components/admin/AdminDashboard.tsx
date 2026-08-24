@@ -10,6 +10,8 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
+import { ComplaintMap } from "../ComplaintMap";
+
 // =========================================================
 // TYPES
 // =========================================================
