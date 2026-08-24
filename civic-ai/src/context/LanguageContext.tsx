@@ -56,6 +56,19 @@ const translations = {
     updating: "Updating...",
     submitSuccess: "Complaint submitted successfully.",
     somethingWrong: "Something went wrong.",
+    stop: "Stop",
+    speak: "Speak",
+    listening: "Listening...",
+    evidencePhoto: "Evidence Photo",
+    uploadClearPhoto: "Upload a clear photo of the issue.",
+    locationRequiredForComplaint: "Your location is required for this complaint.",
+    detectLocationBeforeSubmit: "Detect your location before submitting.",
+    locationDetected: "Location detected",
+    accuracy: "Accuracy",
+    analyzeSubmitComplaint: "Analyze and Submit Complaint",
+    submitFailed: "Submission failed",
+    tryAgain: "Try again",
+    startOver: "Start over",
   },
 
   hi: {
@@ -452,7 +465,11 @@ export function LanguageProvider({
   }
 
   function t(key: TranslationKey) {
-    return translations[language][key];
+    const localeTranslations = translations[language] as Partial<
+      Record<TranslationKey, string>
+    >;
+
+    return localeTranslations[key] ?? translations.en[key];
   }
 
   return (

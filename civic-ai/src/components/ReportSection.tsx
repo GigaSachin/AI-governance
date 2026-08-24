@@ -168,15 +168,15 @@ export function ReportSection() {
   const blockReason = useMemo(() => {
 
     if (text.trim().length === 0) {
-      return t("describeIssue");
+      return t("description");
     }
 
     if (!image) {
-      return t("uploadPhotoContinue");
+      return t("addPhoto");
     }
 
     if (geo.status === "loading") {
-      return t("detectingLocation");
+      return t("loading");
     }
 
     if (!hasLocation) {
@@ -222,7 +222,7 @@ export function ReportSection() {
 
     if (!SpeechRecognition) {
 
-      alert(t("voiceUnsupported"));
+      alert(t("somethingWrong"));
 
       return;
     }
@@ -403,7 +403,9 @@ export function ReportSection() {
 
       setImagePreview(null);
 
-      setImageError(t("invalidImageType"));
+      setImageError(
+        "Invalid image type. Please upload a JPEG, PNG, or WebP image."
+      );
 
 
       event.target.value = "";
@@ -426,7 +428,7 @@ export function ReportSection() {
 
       setImagePreview(null);
 
-      setImageError(t("imageTooLarge"));
+      setImageError("Image is too large. Please upload an image smaller than 10 MB.");
 
 
       event.target.value = "";
@@ -536,7 +538,7 @@ export function ReportSection() {
 
         throw new ApiError(
           "bad_request",
-          t("evidenceRequired")
+          t("evidence")
         );
       }
 
@@ -552,7 +554,7 @@ export function ReportSection() {
 
         throw new ApiError(
           "bad_request",
-          t("locationRequired")
+          t("location")
         );
       }
 
@@ -718,7 +720,7 @@ export function ReportSection() {
 
           <p className="mt-3 text-slate-soft">
 
-            {t("reportDescription")}
+            {t("description")}
 
           </p>
 
@@ -748,7 +750,7 @@ export function ReportSection() {
                   className="sr-only"
                 >
 
-                  {t("describeProblem")}
+                  {t("description")}
 
                 </label>
 
@@ -766,7 +768,7 @@ export function ReportSection() {
 
                   rows={6}
 
-                  placeholder={t("describeProblemPlaceholder")}
+                  placeholder={t("description")}
 
                   className="w-full resize-none rounded-2xl border border-navy-border bg-midnight/60 p-5 pb-16 text-base leading-relaxed text-offwhite placeholder:text-slate-soft/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan"
                 />
