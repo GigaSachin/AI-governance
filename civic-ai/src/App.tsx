@@ -14,7 +14,7 @@ import { Footer } from "./components/Footer";
 export default function App() {
   return (
     <LanguageProvider>
-      {window.location.pathname === "/admin" ? (
+      {window.location.pathname.replace(/\/+$/, "") === "/admin" ? (
         <AdminDashboard />
       ) : (
         <div className="min-h-screen">
