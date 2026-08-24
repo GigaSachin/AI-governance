@@ -7,7 +7,7 @@ export const API_URL =
 
 
 // Gemini can take some time
-const REQUEST_TIMEOUT_MS = 45_000;
+const REQUEST_TIMEOUT_MS = 120_000;
 
 
 // =========================================================
